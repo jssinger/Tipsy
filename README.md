@@ -1,10 +1,10 @@
-# Pre-work - *Name of App Here*
+# Pre-work - *Tipsy*
 
 **Name of your app** is a tip calculator application for iOS.
 
-Submitted by: **Your Name Here**
+Submitted by: **Jonathan Singer**
 
-Time spent: **X** hours spent in total
+Time spent: **4** hours spent in total
 
 ## User Stories
 
@@ -21,7 +21,7 @@ The following **optional** features are implemented:
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [ ] Added slider to allow user to determine tip rate
 
 ## Video Walkthrough 
 
