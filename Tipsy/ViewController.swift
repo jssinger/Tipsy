@@ -24,7 +24,8 @@ class ViewController: UIViewController {
     }
     
     @IBAction func sliderChange(_ sender: Any) {
-        let perc = (sender as! UISlider).value
+        let perc = Int((sender as! UISlider).value)
+        (sender as! UISlider).value = Float(perc)
         percentage.text = String(perc)
         calculateTip()
     }
