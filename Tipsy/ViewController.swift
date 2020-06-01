@@ -19,6 +19,10 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBAction func didTap(_ sender: Any) {
+        view.endEditing(true)
+    }
+    
     @IBAction func billAmountChange(_ sender: Any) {
         calculateTip()
     }
