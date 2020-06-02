@@ -16,6 +16,11 @@ class ViewController: UIViewController {
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var total: UILabel!
     
+    @IBOutlet weak var billAmountLabel: UILabel!
+    @IBOutlet weak var tipPercentageLabel: UILabel!
+    @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var tipAmountLabel: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = currentColor
@@ -33,12 +38,21 @@ class ViewController: UIViewController {
             percentage.textColor = UIColor.white
             tipAmount.textColor = UIColor.white
             total.textColor = UIColor.white
+            billAmountLabel.textColor = UIColor.white
+            tipPercentageLabel.textColor = UIColor.white
+            totalLabel.textColor = UIColor.white
+            tipAmountLabel.textColor = UIColor.white
             currentColor = UIColor.black
+            
         }else{
             self.view.backgroundColor = UIColor.white
             percentage.textColor = UIColor.black
             tipAmount.textColor = UIColor.black
             total.textColor = UIColor.black
+            billAmountLabel.textColor = UIColor.black
+            tipPercentageLabel.textColor = UIColor.black
+            totalLabel.textColor = UIColor.black
+            tipAmountLabel.textColor = UIColor.black
             currentColor = UIColor.white
         }
     }

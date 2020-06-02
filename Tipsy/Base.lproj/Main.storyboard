@@ -112,9 +112,13 @@
                     </view>
                     <connections>
                         <outlet property="billAmount" destination="Sob-C3-KZE" id="tgi-Cl-hUO"/>
+                        <outlet property="billAmountLabel" destination="ap8-ay-RDS" id="Iqs-LO-GmH"/>
                         <outlet property="percentage" destination="OFV-kU-u5P" id="Bms-YO-w9q"/>
                         <outlet property="tipAmount" destination="VO3-PG-lwn" id="gO3-yp-xEi"/>
+                        <outlet property="tipAmountLabel" destination="zny-yq-LO2" id="bsE-w3-CmJ"/>
+                        <outlet property="tipPercentageLabel" destination="ePy-9t-Tuh" id="sIr-91-bYm"/>
                         <outlet property="total" destination="FfO-4n-RAv" id="9gA-ho-kAC"/>
+                        <outlet property="totalLabel" destination="hVg-XN-MWC" id="lTD-Jp-VVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
