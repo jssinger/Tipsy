@@ -10,17 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    var currentColor:UIColor = UIColor.white
     @IBOutlet weak var billAmount: UITextField!
     @IBOutlet weak var percentage: UILabel!
     @IBOutlet weak var tipAmount: UILabel!
     @IBOutlet weak var total: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.view.backgroundColor = currentColor
         // Do any additional setup after loading the view.
     }
 
     @IBAction func didTap(_ sender: Any) {
         view.endEditing(true)
+    }
+    
+    
+    @IBAction func darkModeChange(_ sender: UIButton) {
+        if(currentColor==UIColor.white){
+            self.view.backgroundColor = UIColor.black
+            percentage.textColor = UIColor.white
+            tipAmount.textColor = UIColor.white
+            total.textColor = UIColor.white
+            currentColor = UIColor.black
+        }else{
+            self.view.backgroundColor = UIColor.white
+            percentage.textColor = UIColor.black
+            tipAmount.textColor = UIColor.black
+            total.textColor = UIColor.black
+            currentColor = UIColor.white
+        }
     }
     
     @IBAction func billAmountChange(_ sender: Any) {
