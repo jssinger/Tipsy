@@ -19,6 +19,7 @@ The following features are under development:
 * [ ] Split bill between friends
 * [ ] Export bill to Venmo/PayPal
 
+
 ## License
 
     Copyright 2020 Jonathan Singer
