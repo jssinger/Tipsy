@@ -10,7 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    var currentColor:UIColor = UIColor.white
+    var bill: Double = 0.0
+    var tipPercentage: Double = 15.0
+    var currentColor: UIColor = UIColor.white
     @IBOutlet weak var billAmount: UITextField!
     @IBOutlet weak var percentage: UILabel!
     @IBOutlet weak var tipAmount: UILabel!
@@ -58,23 +60,24 @@ class ViewController: UIViewController {
     }
     
     @IBAction func billAmountChange(_ sender: Any) {
+        bill = Double(billAmount.text ?? "") ?? 0.0
         calculateTip()
     }
     
     @IBAction func sliderChange(_ sender: Any) {
-        let perc = Int((sender as! UISlider).value)
-        (sender as! UISlider).value = Float(perc)
-        percentage.text = String(perc)
+        tipPercentage = Double((sender as! UISlider).value)
+        // Remove all but the first decimal place from tipPercentage
+        tipPercentage = Double(Int(tipPercentage*10))/10
+        percentage.text = String(format: "%.1f", tipPercentage) + "%"
         calculateTip()
     }
     
     func calculateTip(){
-        let bill = Double(billAmount.text!)!
-        let perc = Double(percentage.text!)!
-        let tip = bill*(perc/100)
+        let tip = bill*((tipPercentage)/100)
         let totalBill = tip+bill
-        tipAmount.text = String(format: "%.2f", tip)
-        total.text = String(format: "%.2f", totalBill)
+        let tipAmt = String(format: "%.2f", tip)
+        tipAmount.text = "$" + tipAmt
+        let ttl = String(format: "%.2f", totalBill)
+        total.text = "$" + ttl
     }
 }
-
