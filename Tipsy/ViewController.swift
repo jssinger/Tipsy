@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     var bill: Double = 0.0
     var tipPercentage: Double = 15.0
     var currentColor: UIColor = UIColor.white
+    @IBOutlet weak var button: UIButton!
     @IBOutlet weak var billAmount: UITextField!
     @IBOutlet weak var percentage: UILabel!
     @IBOutlet weak var tipAmount: UILabel!
@@ -33,7 +34,6 @@ class ViewController: UIViewController {
         view.endEditing(true)
     }
     
-    
     @IBAction func darkModeChange(_ sender: UIButton) {
         if(currentColor==UIColor.white){
             self.view.backgroundColor = UIColor.black
@@ -45,6 +45,8 @@ class ViewController: UIViewController {
             totalLabel.textColor = UIColor.white
             tipAmountLabel.textColor = UIColor.white
             currentColor = UIColor.black
+            button.setTitle("Light Mode", for: .normal)
+            
             
         }else{
             self.view.backgroundColor = UIColor.white
@@ -56,6 +58,7 @@ class ViewController: UIViewController {
             totalLabel.textColor = UIColor.black
             tipAmountLabel.textColor = UIColor.black
             currentColor = UIColor.white
+            button.setTitle("Dark Mode", for: .normal)
         }
     }
     
